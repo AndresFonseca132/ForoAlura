@@ -1,6 +1,7 @@
 package com.alura.latam.foroalura.controller;
 
 import com.alura.latam.foroalura.domain.usuario.*;
+import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -34,6 +35,29 @@ public class UsuarioController {
         return ResponseEntity.ok(usuarioRepository.findByActivoTrue(paginacion).map(DatosListadoUsuario::new));
     }
 
+    @PutMapping
+    @Transactional
+    public ResponseEntity<DatosRespuestaUsuario> actualizarUsuario(@RequestBody @Valid DatosActualizarUsuario datosActualizarUsuario){
+    Usuario usuario = usuarioRepository.getReferenceById(datosActualizarUsuario.id());
+    usuario.actualizarDatos(datosActualizarUsuario);
+        DatosRespuestaUsuario datosRespuestaUsuario = new DatosRespuestaUsuario(usuario.getId(), usuario.getNombre(), usuario.getEmail(), usuario.getTelefono(), usuario.getUsuario());
+        return ResponseEntity.ok(datosRespuestaUsuario);
+    }
 
+    @DeleteMapping("/{id}")
+    @Transactional
+    public ResponseEntity eliminarUsuario(@PathVariable Long id){
+        Usuario usuario = usuarioRepository.getReferenceById(id);
+        usuario.desactivarUsuario();
+        return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<DatosRespuestaUsuario> obtenerUsuario(@PathVariable Long id){
+        Usuario usuario = usuarioRepository.getReferenceById(id);
+        DatosRespuestaUsuario datosRespuestaUsuario = new DatosRespuestaUsuario(usuario.getId(), usuario.getNombre(), usuario.getEmail(), usuario.getTelefono(), usuario.getUsuario());
+        return ResponseEntity.ok(datosRespuestaUsuario);
+    }
 
 }
+

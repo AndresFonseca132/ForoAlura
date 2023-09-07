@@ -38,4 +38,19 @@ public class Usuario {
         this.rol =  Rol.USER;
     }
 
+    public void actualizarDatos(DatosActualizarUsuario datosActualizarUsuario) {
+        if (datosActualizarUsuario.nombre() != null) {
+            this.nombre = datosActualizarUsuario.nombre();
+        }
+        if (datosActualizarUsuario.telefono() != null){
+            this.telefono = datosActualizarUsuario.telefono();
+        }
+        if (datosActualizarUsuario.clave() != null) {
+            this.clave = datosActualizarUsuario.clave();
+        }
+    }
+
+    public void desactivarUsuario() {
+        this.activo = false;
+    }
 }
