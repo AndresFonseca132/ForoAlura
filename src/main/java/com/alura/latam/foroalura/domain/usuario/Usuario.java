@@ -37,4 +37,5 @@ public class Usuario {
         this.clave = datosRegistroUsuario.clave();
         this.rol =  Rol.USER;
     }
+
 }
