@@ -20,6 +20,16 @@ public class TratadorDeErrores {
         return ResponseEntity.badRequest().body(errores);
     }
 
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity trataError400(IllegalArgumentException e){
+        return ResponseEntity.badRequest().body(e.getMessage());
+    }
+
+    @ExceptionHandler(ValidacionDeIntegridad.class)
+    public ResponseEntity errorHandlerValidacionesIntegridad(Exception e){
+        return ResponseEntity.badRequest().body(e.getMessage());
+    }
+
     private record DatosErrorValidacion(String campo, String error){
         public DatosErrorValidacion(FieldError error){
             this(error.getField(), error.getDefaultMessage());

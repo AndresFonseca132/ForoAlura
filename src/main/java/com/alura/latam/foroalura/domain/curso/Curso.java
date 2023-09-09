@@ -1,4 +1,4 @@
-package com.alura.latam.foroalura.domain.course;
+package com.alura.latam.foroalura.domain.curso;
 
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
@@ -44,6 +44,5 @@ public class Curso {
             this.lenguaje = datosRespuestaCurso.lenguaje();
         }
     }
-
 }
 

@@ -20,7 +20,7 @@ public class UsuarioController {
     @PostMapping
     public ResponseEntity<DatosRespuestaUsuario> registroUsuario(@RequestBody @Valid DatosRegistroUsuario datosRegistroUsuario){
         if (usuarioRepository.existsByEmailOrUsuario(datosRegistroUsuario.email(), datosRegistroUsuario.usuario())){
-            return ResponseEntity.badRequest().build();
+            throw new IllegalArgumentException("El email o el usuario ya existen");
         }else {
             Usuario usuario = new Usuario(datosRegistroUsuario);
             usuarioRepository.save(usuario);

@@ -1,11 +1,12 @@
 package com.alura.latam.foroalura.controller;
 
-import com.alura.latam.foroalura.domain.course.*;
-import com.alura.latam.foroalura.domain.usuario.DatosRespuestaUsuario;
-import com.alura.latam.foroalura.domain.usuario.Usuario;
+import com.alura.latam.foroalura.domain.curso.*;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,8 +28,8 @@ public class CursoController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Curso>> listadoCursos(){
-        return ResponseEntity.ok(cursoRepository.findAll());
+    public ResponseEntity<Page<DatosRespuestaCurso>> listadoCursos(@PageableDefault(size = 5) Pageable paginacion){
+        return ResponseEntity.ok(cursoRepository.findAll(paginacion).map(DatosRespuestaCurso::new));
     }
 
     @PutMapping

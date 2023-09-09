@@ -1,4 +1,4 @@
-package com.alura.latam.foroalura.domain.course;
+package com.alura.latam.foroalura.domain.curso;
 
 
 import jakarta.validation.constraints.NotBlank;
