@@ -5,6 +5,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 
+// El record de DatosRegistroUsuario es un objeto inmutable que se utiliza para validar los datos de registro de un usuario
 public record DatosRegistroUsuario(
         @NotBlank(message = "Debes escribir el nombre")
         String nombre,

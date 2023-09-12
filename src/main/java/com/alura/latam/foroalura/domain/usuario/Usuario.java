@@ -10,6 +10,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 
+// La clase Usuario se encarga de contener los atributos y los metodos de la entidad Usuario, entre estos metodos
+// encontramos getters y setters, constructores y metodos de la interfaz UserDetails
 @Table(name = "usuarios")
 @Entity(name = "Usuario")
 @Getter

@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+// La clase TopicoService es la encargada de realizar la logica de negocio, como algunas validaciones antes de poder
+// guardar los datos en la base de datos
 @Service
 public class TopicoService {
 

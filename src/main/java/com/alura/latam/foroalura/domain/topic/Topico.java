@@ -10,6 +10,8 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
+// La clase topico es la encargada de contener los atributos y las anotaciones que la permitiran mapear en la base de
+// datos, ademas de contener los Getters y Settets y los constructores
 @Table(name = "topicos")
 @Entity(name = "Topico")
 @Getter

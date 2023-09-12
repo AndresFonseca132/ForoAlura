@@ -7,6 +7,8 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+// Se agregan las anotaciones necesarias para que Spring sepa que esta clase es una entidad de la base de datos
+// Ademas dentro de esta clase se confiugran los atributos y metodos de la entidad.
 @Table(name = "cursos")
 @Entity(name = "Curso")
 @Getter
