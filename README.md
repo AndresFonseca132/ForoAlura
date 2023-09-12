@@ -1,6 +1,6 @@
 # ForoAlura - Challenge Spring Boot
 ## Formacion Backend Oracle Next Education
-![image](https://github.com/AndresFonseca132/ForoAlura/assets/125603660/ea9b7523-da19-4a6f-b7fe-7749cca89e3e)
+![logo_hotel](https://github.com/AndresFonseca132/ForoAlura/assets/125603660/fe6a7512-4c19-4eec-b336-7c82f4104e7c)
 
 ## Descripcion del Proyecto
 Este es un proyecto desarrollado en Java con las tecnologias de Spring Boot y MySQL, que consiste una API rest del funcionamiento de un Foro, este Proyecto es un reto propuesto por alura para poder aplicar mis conocimientos adquiridos en Java Y SpringBoot y
