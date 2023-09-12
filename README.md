@@ -1,6 +1,6 @@
 # ForoAlura - Challenge Spring Boot
 ## Formacion Backend Oracle Next Education
-![logo_hotel](https://github.com/AndresFonseca132/ForoAlura/assets/125603660/fe6a7512-4c19-4eec-b336-7c82f4104e7c)
+![logo_hotel](https://github.com/AndresFonseca132/ForoAlura/assets/125603660/d145ec33-879d-4834-965f-7b7350cdae13)
 
 ## Descripcion del Proyecto
 Este es un proyecto desarrollado en Java con las tecnologias de Spring Boot y MySQL, que consiste una API rest del funcionamiento de un Foro, este Proyecto es un reto propuesto por alura para poder aplicar mis conocimientos adquiridos en Java Y SpringBoot y
@@ -22,7 +22,7 @@ ademas de los DTO para la recepcion y envio de datos.
 ### `infra`
 Finalmente el package infra contiene lo que es la logica para el tratramiento de errores, la documentacion con Spring Swagger y las clases que se encargan del tema de autenticacion de usuarios con la generacion del token
 ## Base de Datos:
-![image](https://github.com/AndresFonseca132/ForoAlura/assets/125603660/ffcee73c-5c96-4888-bb38-959bea25949a) 
+![basededatos](https://github.com/AndresFonseca132/ForoAlura/assets/125603660/350cba84-45a4-43b2-8edd-473dbc13c275)
 
 El modelo de base de datos se conforma por 4 tablas las cuales son `cursos`, `topicos`, `usuarios` y `respuestas`, estas tablas estan conectada entre se por medio de relaciones las cuales en su totalidad son de uno a muchos.
 ## EndPoints
@@ -57,18 +57,18 @@ El modelo de base de datos se conforma por 4 tablas las cuales son `cursos`, `to
 Ademas se agrego la funcionalidad de que no se permiten metodos PUT o DELETE si no se esta autenticado
 ## Resultados desde Postman
 ### Metodo GET
-![image](https://github.com/AndresFonseca132/ForoAlura/assets/125603660/e15b72a1-6ec3-470b-96c4-4b3007cc7f31)
+![metodoGet](https://github.com/AndresFonseca132/ForoAlura/assets/125603660/27a1a043-8c86-416c-83d3-aaa6431daa51)
 ### Metodo POST
-![image](https://github.com/AndresFonseca132/ForoAlura/assets/125603660/7a157d23-f4f7-433f-b53a-9727b4472fb6)
+![metodoPost](https://github.com/AndresFonseca132/ForoAlura/assets/125603660/9ecdccb2-a709-4bf8-a6ba-7edfb3d86cf9)
 ### Metodo PUT
-![image](https://github.com/AndresFonseca132/ForoAlura/assets/125603660/5545f035-21a2-4d04-a044-8a5930f2beb3)
+![metodoPut](https://github.com/AndresFonseca132/ForoAlura/assets/125603660/2c851d58-7c09-472d-b381-d7e62a055a70)
 ### Metodo DELETE
-![image](https://github.com/AndresFonseca132/ForoAlura/assets/125603660/2eed5527-6e9b-4b2c-a326-16c34e2c8ba5)
+![metodoDelete](https://github.com/AndresFonseca132/ForoAlura/assets/125603660/d327d0b4-1fd1-4faf-8438-f72c721f0601)
 ### Login
-![image](https://github.com/AndresFonseca132/ForoAlura/assets/125603660/7124b652-af06-4b82-b07f-1aa7e307e17d)
-
+![login](https://github.com/AndresFonseca132/ForoAlura/assets/125603660/f5e36a82-4674-42c7-8c2a-fbb7207cebe4)
 ## Documentacion Swagger
-![image](https://github.com/AndresFonseca132/ForoAlura/assets/125603660/2e01e8ad-7c2b-46b6-aa7e-95380310cc2f)
+![documentacion](https://github.com/AndresFonseca132/ForoAlura/assets/125603660/71e89dc0-a697-4dc8-a6be-7c5bbc536b50)
+
 
 
 
